@@ -4,9 +4,9 @@ import React from 'react';
 
 
 const unauthenticatedPages = ['/', '/signup', '/login'];
-const authenticatedPages = [];
+const authenticatedPages = ['/ownerhub'];
 // Need to be modified
-const mainAuthenticatedPage = '/';
+const mainAuthenticatedPage = '/ownerhub';
 const mainUnauthenticatedPage = '/';
 
 class App extends React.Component {
@@ -18,7 +18,7 @@ class App extends React.Component {
         console.log(pathname);
         const isUnauthenticatedPages = unauthenticatedPages.includes(pathname);
         const isAuthenticatedPages = authenticatedPages.includes(pathname);
-        // if on unauthenticated page and logged in, redirect to /links
+        // if on unauthenticated page and logged in, redirect to /ownerhub
         if (isAuthenticated && isUnauthenticatedPages) {
             this.props.history.replace(mainAuthenticatedPage);
         }  // if on authenticated page and not logged in, redirect to /

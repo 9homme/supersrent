@@ -1,4 +1,9 @@
 .public-header {
-    background: #2B3990;
+    background: $brand-primary-color;
     width: 100%;
+    padding: $padding;
+}
+
+.public-header__image {
+    width: 15rem;
 }

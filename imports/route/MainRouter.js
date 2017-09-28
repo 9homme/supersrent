@@ -8,10 +8,9 @@ import NotFound from '../ui/NotFound';
 import Signup from '../ui/Signup';
 import Home from '../ui/Home';
 import Login from '../ui/Login';
+import OwnerHub from '../ui/OwnerHub';
 import App from '../ui/App';
 
-const unauthenticatedPages = ['/', '/signup'];
-const authenticatedPages = ['/link'];
 
 export default class MainRouter extends React.Component {
     render() {
@@ -22,6 +21,27 @@ export default class MainRouter extends React.Component {
                     <Switch>
                         <Route exact path="/" render={() => (
                              <Home />
+                        )} />
+                        <Route exact path="/signup" render={() => (
+                            Meteor.userId() ? (
+                                <Redirect to="/ownerhub" />
+                            ) : (
+                                    <Signup />
+                                )
+                        )} />
+                        <Route exact path="/login" render={() => (
+                            Meteor.userId() ? (
+                                <Redirect to="/ownerhub" />
+                            ) : (
+                                    <Login />
+                                )
+                        )} />
+                        <Route exact path="/ownerhub" render={() => (
+                            Meteor.userId() ? (
+                                <OwnerHub />
+                            ) : (
+                                    <Redirect to="/login" />
+                                )
                         )} />
                         <Route component={NotFound} />
                     </Switch>

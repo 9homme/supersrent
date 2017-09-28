@@ -17,6 +17,7 @@ export default class Home extends React.Component {
         <PublicHeader/>
         <div>
           <h1>Welcome to Supersrent Home page, We are coming soon!!</h1>
+           <Link to="/ownerhub">Go to OwnerHub</Link>
         </div>
       </div>
     )
