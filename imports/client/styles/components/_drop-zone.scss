@@ -1,0 +1,38 @@
+.drop-zone {
+    width: 95vw; 
+    min-height: 50rem; 
+    border-width: 0.1rem; 
+    border-color: $dark-grey;
+    border-style: dashed; 
+    border-radius: 3rem;
+    margin: $space;
+}
+
+.drop-zone__topbar{
+    width: 100%;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.drop-zone__image-container {
+    display: inline-block;
+    position: relative;
+    margin: $space; 
+}
+
+.drop-zone__delete-button {
+    position: absolute;
+    right: -5;
+    top: -5 
+}
+
+.drop-zone--empty {
+    min-height: 50rem;
+    width:100%;
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+}
+.drop-zone--empty__content {
+    text-align: center;
+}

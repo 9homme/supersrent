@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
 import PublicHeader from './PublicHeader';
+import ImageDropZone from './ImageDropZone';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -10,14 +11,14 @@ export default class Home extends React.Component {
       error: ''
     };
   }
-
   render() {
     return (
       <div>
-        <PublicHeader/>
+        <PublicHeader />
         <div>
           <h1>Welcome to Supersrent Home page, We are coming soon!!</h1>
-           <Link to="/ownerhub">Go to OwnerHub</Link>
+          <Link to="/ownerhub">Go to OwnerHub</Link>
+          <ImageDropZone/>
         </div>
       </div>
     )
