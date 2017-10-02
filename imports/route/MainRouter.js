@@ -9,6 +9,7 @@ import Signup from '../ui/Signup';
 import Home from '../ui/Home';
 import Login from '../ui/Login';
 import OwnerHub from '../ui/OwnerHub';
+import Admin from '../ui/Admin';
 import App from '../ui/App';
 
 
@@ -39,6 +40,13 @@ export default class MainRouter extends React.Component {
                         <Route exact path="/ownerhub" render={() => (
                             Meteor.userId() ? (
                                 <OwnerHub />
+                            ) : (
+                                    <Redirect to="/login" />
+                                )
+                        )} />
+                        <Route exact path="/admin" render={() => (
+                            Meteor.userId() ? (
+                                <Admin />
                             ) : (
                                     <Redirect to="/login" />
                                 )

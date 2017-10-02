@@ -1,16 +1,16 @@
 .drop-zone {
-    width: 95vw; 
+    width: 100%; 
     min-height: 50rem; 
     border-width: 0.1rem; 
     border-color: $dark-grey;
     border-style: dashed; 
     border-radius: 3rem;
-    margin: $space;
+    margin-bottom: $space;
 }
 
 .drop-zone__topbar{
     width: 100%;
-    padding-left: 2rem;
+    text-align: center;
     padding-top: 2rem;
 }
 
@@ -22,8 +22,8 @@
 
 .drop-zone__delete-button {
     position: absolute;
-    right: -5;
-    top: -5 
+    right: 0;
+    top: 0; 
 }
 
 .drop-zone--empty {

@@ -1,0 +1,21 @@
+.item {
+    border: 1px solid $item-border-color;
+    background: $item-bg; 
+    padding: $padding;
+    margin-bottom: $space;
+}
+
+.item__control * {
+    margin-bottom: 0;
+    margin-right: $space/2;
+}
+
+.item__stat {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.item__status-message {
+    text-align: center;
+    margin:0;
+}

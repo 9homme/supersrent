@@ -3,8 +3,8 @@ import { withRouter } from "react-router-dom";
 import React from 'react';
 
 
-const unauthenticatedPages = ['/', '/signup', '/login'];
-const authenticatedPages = ['/ownerhub'];
+const unauthenticatedPages = ['/signup', '/login'];
+const authenticatedPages = ['/','/ownerhub','/admin'];
 // Need to be modified
 const mainAuthenticatedPage = '/ownerhub';
 const mainUnauthenticatedPage = '/';
